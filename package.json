@@ -1,0 +1,25 @@
+{
+  "name": "trump-approval-rating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "zip": "node zip.js",
+    "update":
+      "aws lambda update-function-code --function-name trump-approval-rating --zip fileb://archive.zip --profile personal",
+    "deploy": "npm run zip && npm run update"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^1.1.12",
+    "fs-extra": "^6.0.1",
+    "moment": "^2.22.1",
+    "node-fetch": "^2.1.2",
+    "zip-folder": "^1.0.0"
+  },
+  "devDependencies": {
+    "aws": "0.0.3-2"
+  }
+}
