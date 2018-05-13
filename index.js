@@ -29,11 +29,6 @@ function getAllPollDataFromCSV(data) {
   });
 }
 
-async function getMostRecentApprovalFromData(data) {
-  const parsedCSV = await parse(data);
-  const key = parsedCSV[0];
-}
-
 exports.handler = async (event, context, callback) => {
   try {
     const page = await fetch(CSV_URL).then(res => res.text());
